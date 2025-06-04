@@ -1,13 +1,370 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invictus Idiomas</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invictus Idiomas - Fluência em 18 Meses</title>
+    
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">Invictus</a>
+            <div class="nav-menu">
+                <a href="#beneficios" class="nav-link">Benefícios</a>
+                <a href="#metodo" class="nav-link">Método</a>
+                <a href="#unidades" class="nav-link">Unidades</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Torne-se fluente em 
+                    <span class="highlight">18 meses</span> 
+                    aprendendo desde o primeiro dia através de nosso 
+                    <span class="highlight">método imersivo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Você vai se sentir o tempo todo como se estivesse em outro país.
+                </p>
+                <a href="#" class="hero-cta">
+                    Quero me tornar fluente em 18 meses
+                </a>
+                <div class="hero-arrow">
+                    <div class="scroll-indicator"></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-container">
+                    <div class="hero-image-placeholder">
+                        <div class="image-overlay">
+                            <div class="play-button">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="beneficios">
+        <div class="benefits-container">
+            <div class="benefits-header">
+                <h2 class="benefits-title">Benefícios</h2>
+                <p class="benefits-subtitle">DE SER UM ALUNO INVICTUS</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card" data-animation="fadeInUp">
+                    <div class="benefit-icon">👥</div>
+                    <h3 class="benefit-title">Fluência em 18 meses</h3>
+                    <p class="benefit-description">
+                        Já pensou falar inglês da mesma forma que o português em apenas 18 meses? A metodologia da 
+                        Invictus Idiomas com sua ênfase na conversação e as aulas práticas como se tivesse em outro país 
+                        é como aprender com a experiência de um intercâmbio.
+                        <br><br>
+                        <strong>Chega de verbo To Be. Venha ser fluente na prática!</strong>
+                    </p>
+                </div>
+
+                <div class="benefit-card" data-animation="fadeInUp" data-delay="0.2s">
+                    <div class="benefit-icon">🕐</div>
+                    <h3 class="benefit-title">Horários Flexíveis e Programáveis</h3>
+                    <p class="benefit-description">
+                        Problema com tempo? Aqui na Invictus é <strong>você quem marca suas aulas</strong> de acordo com sua rotina. 
+                        Aqui não temos formação de turma. Sabemos que seus horários não são iguais aos de ninguém, 
+                        portanto, você marca suas aulas de acordo com você. Comece agora mesmo a sua jornada da fluência.
+                    </p>
+                </div>
+
+                <div class="benefit-card" data-animation="fadeInUp" data-delay="0.4s">
+                    <div class="benefit-icon">📚</div>
+                    <h3 class="benefit-title">Aulas Práticas</h3>
+                    <p class="benefit-description">
+                        Você já foi a um cinema em Londres? Você já pensou em aprender numa hamburgueria nos EUA? 
+                        Cantar em um karaokê em Las Vegas? Conversar numa rua de Nova Iorque? A invictus trouxe todas 
+                        essas experiência para você. <strong>Em cada escola temos cinemas, aulas de gastronomia e grupos de 
+                        conversação</strong> para você aprender de forma fácil e dinâmica.
+                    </p>
+                </div>
+
+                <div class="benefit-card" data-animation="fadeInUp" data-delay="0.6s">
+                    <div class="benefit-icon">🥽</div>
+                    <h3 class="benefit-title">Realidade Aumentada</h3>
+                    <p class="benefit-description">
+                        Hoje a educação não é a mesma de 30 anos atrás. A invictus idiomas <strong>inovou o mercado inserindo 
+                        a tecnologia de realidade aumentada</strong> em seu material didático. Imagine os personagens dos 
+                        livros terem vida e, junto com você, vivenciarem as aventuras de ser fluente. Hologramas com cada 
+                        personagem para te surpreender e proporcionar uma experiência única.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-placeholder">
+                        <div class="video-overlay">
+                            <div class="play-button-large">▶</div>
+                        </div>
+                        <div class="video-caption">Conheça nosso Material Didático</div>
+                    </div>
+                </div>
+                <div class="video-item">
+                    <div class="video-placeholder secondary">
+                        <div class="video-overlay">
+                            <div class="play-button-large">▶</div>
+                        </div>
+                        <div class="video-caption">O mundo gira ao meu redor</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="method" id="metodo">
+        <div class="method-container">
+            <div class="method-flags">
+                <span class="flag">🇺🇸</span>
+                <span class="flag">🇪🇸</span>
+                <span class="flag">🇩🇪</span>
+                <span class="flag">🇮🇹</span>
+                <span class="flag">🇫🇷</span>
+                <span class="flag">➕</span>
+            </div>
+            <h2 class="method-title">Método Communicative Approach</h2>
+            <div class="method-content">
+                <p class="method-description">
+                    Nada melhor do que <span class="method-highlight">conseguir expressar os seus sentimentos e 
+                    pensamentos por meio da fala</span>, concorda?
+                </p>
+                <p class="method-description">
+                    Nós sabemos que você já está cansado(a) de ter que ficar traduzindo 
+                    tudo na sua cabeça antes de falar.
+                </p>
+                <p class="method-description">
+                    Pensando nisso, utilizamos um método de ensino com <span class="method-highlight">foco na 
+                    conversação</span>, no qual você irá aprender um novo idioma da mesma 
+                    forma que aprendeu a sua língua mãe.
+                </p>
+            </div>
+            <a href="#" class="method-cta">
+                Quero aprender a pensar no idioma
+            </a>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations" id="unidades">
+        <div class="locations-container">
+            <div class="locations-content">
+                <h2 class="locations-title">Unidades prontas para te receber</h2>
+                
+                <div class="locations-grid">
+                    <div class="location-card">
+                        <h3 class="location-name">Unidade Aldeota</h3>
+                        <p class="location-address">Rua Carlos Vasconcelos 1240</p>
+                        <p class="location-contact">Contato: (85) 3016-1200</p>
+                    </div>
+
+                    <div class="location-card">
+                        <h3 class="location-name">Unidade Bezerra de Menezes</h3>
+                        <p class="location-address">Avenida Bezerra de Menezes, 2571 – Parquelândia.</p>
+                        <p class="location-contact">Contato: (85) 2180-6118</p>
+                    </div>
+
+                    <div class="location-card">
+                        <h3 class="location-name">Unidade Cidade dos Funcionários</h3>
+                        <p class="location-address">Avenida Oliveira Paiva, 740 – Cidade dos Funcionários.</p>
+                        <p class="location-contact">Contato: (85) 3393-7900</p>
+                    </div>
+
+                    <div class="location-card">
+                        <h3 class="location-name">Unidade Treze de Maio</h3>
+                        <p class="location-address">Avenida 13 de Maio, 1043 – Bairro de Fátima.</p>
+                        <p class="location-contact">Contato: (85) 3393-9000</p>
+                    </div>
+                </div>
+
+                <a href="#" class="locations-cta">
+                    Quero agendar uma visita
+                </a>
+            </div>
+            
+            <div class="locations-image">
+                <div class="locations-image-placeholder">
+                    <div class="play-button">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="depoimentos">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <h2 class="testimonials-title">Depoimentos</h2>
+                <p class="testimonials-subtitle">
+                    <span class="highlight-text">Um de nossos princípios é colocar nossas alunos em primeiro lugar.</span>
+                    <br>Veja o que eles acham de nós:
+                </p>
+            </div>
+
+            <div class="testimonials-carousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <blockquote class="testimonial-quote">
+                            "Obrigada a vocês por colocar orgulho e vontade de vencer no meu filho, a querer viver e lutar. 
+                            Do fundo do meu coração é gratidão que sinto!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Gilvanir Peixoto</strong>
+                            <span>Unidade Cid. dos Funcionários</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <blockquote class="testimonial-quote">
+                            "Como o número de alunos nas aulas é reduzido você tem mais atenção e realmente 
+                            começa a entender e falar o inglês desde a primeira aula. Só tenho a agradecer por toda 
+                            atenção e aprendizado durante o tempo do curso! ❤️"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <strong>Ana Karen</strong>
+                            <span>Unidade On-line</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+            </div>
+
+            <a href="#" class="testimonials-cta">
+                Quero me matricular
+            </a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como faço para me matricular?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Entre em contato conosco através de uma de nossas unidades ou pelo WhatsApp. Nossa equipe te ajudará com todo o processo de matrícula.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    As aulas on-line são gravadas?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sim, todas as aulas online ficam gravadas e disponíveis para você assistir quantas vezes quiser.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quais os horários das aulas?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Os horários são flexíveis! Você agenda suas aulas de acordo com sua disponibilidade.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quantas vezes posso assistir a mesma aula?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Você pode assistir quantas vezes quiser. Não há limite para revisão do conteúdo.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quando posso iniciar o curso?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Você pode iniciar a qualquer momento! Não esperamos formar turmas.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como acessar o link das aulas on-line?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Após a matrícula, você receberá acesso à nossa plataforma com todos os links das aulas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="#" class="logo">Invictus</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">📘</a>
+                <a href="#" class="social-link">💬</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Button -->
+    <a href="#" class="chat-button">
+        🗨️ Fale conosco por aqui!
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
