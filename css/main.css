@@ -77,15 +77,18 @@
             }
         }
 
-        /* Glass Morphism Effect */
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+}
+
+/* Remove position: relative from glass, and add it specifically where needed */
+.glass:not(nav) {
+    position: relative;
+}
 
         .glass::before {
             content: '';
@@ -438,6 +441,8 @@
             font-weight: 800;
             margin-bottom: 1rem;
             letter-spacing: -0.02em;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            /* Add this line if not present */
         }
 
         .section-subtitle {

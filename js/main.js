@@ -18,10 +18,14 @@ window.addEventListener('scroll', () => {
 
     if (currentScroll > 50) {
         navbar.classList.add('scrolled');
+        navbar.style.transform = 'translateY(0)'; // Ensure it stays visible
     } else {
         navbar.classList.remove('scrolled');
     }
 
+    // Keep navbar always visible (remove any hide behavior)
+    navbar.style.transform = 'translateY(0)';
+    
     lastScroll = currentScroll;
 });
 
@@ -84,5 +88,14 @@ document.querySelectorAll('.btn').forEach(button => {
                 this.style.transform = '';
             }, 200);
         }
+    });
+});
+
+// Logo click handler - scroll to top
+document.querySelector('.nav-logo').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
     });
 });
