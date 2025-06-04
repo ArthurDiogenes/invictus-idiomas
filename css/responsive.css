@@ -74,7 +74,7 @@
     
     /* Benefits Grid */
     .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
     
@@ -104,8 +104,13 @@
         gap: var(--spacing-xs);
     }
     
-    .flag {
-        font-size: var(--font-size-2xl);
+    .flag-item {
+        min-width: 60px;
+        padding: var(--spacing-xs);
+    }
+    
+    .flag-icon {
+        font-size: var(--font-size-xl);
     }
     
     /* Cards */
@@ -151,7 +156,7 @@
     
     /* Hero Section */
     .hero {
-        padding: var(--spacing-lg) 0;
+        padding: calc(var(--spacing-lg) + 60px) 0 var(--spacing-lg) 0;
         min-height: 90vh;
     }
     
@@ -253,8 +258,17 @@
         margin-bottom: var(--spacing-md);
     }
     
-    .flag {
-        font-size: var(--font-size-xl);
+    .flag-item {
+        min-width: 50px;
+        padding: var(--spacing-xs);
+    }
+    
+    .flag-icon {
+        font-size: var(--font-size-lg);
+    }
+    
+    .flag-text {
+        font-size: var(--font-size-xs);
     }
     
     /* Locations */
@@ -294,6 +308,14 @@
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: var(--font-size-base);
         width: 100%;
+    }
+    
+    .testimonial-track {
+        width: 200%;
+    }
+    
+    .testimonial-card {
+        padding: var(--spacing-md);
     }
     
     /* FAQ */

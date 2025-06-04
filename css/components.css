@@ -233,6 +233,20 @@
     transition: all var(--transition-normal);
 }
 
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-overlay-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
 .video-overlay:hover {
     background: rgba(0, 0, 0, 0.5);
 }
@@ -288,54 +302,71 @@
 }
 
 /* Testimonial Component */
+.testimonials-carousel {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 200%;
+}
+
 .testimonial-card {
     background: var(--glassmorphism);
     backdrop-filter: var(--backdrop-blur);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     text-align: center;
     transition: all var(--transition-normal);
-    opacity: 0;
-    transform: translateX(20px);
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
 }
 
-.testimonial-card.active {
-    opacity: 1;
-    transform: translateX(0);
+.testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-gradient);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: var(--text-accent);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.3;
 }
 
 .testimonial-quote {
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
     font-style: italic;
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
     line-height: var(--line-height-relaxed);
-}
-
-.testimonial-quote::before {
-    content: '"';
-    color: var(--text-accent);
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-}
-
-.testimonial-quote::after {
-    content: '"';
-    color: var(--text-accent);
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
+    position: relative;
 }
 
 .testimonial-author {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    align-items: center;
 }
 
 .testimonial-author strong {
     color: var(--text-accent);
     font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
 }
 
 .testimonial-author span {
@@ -355,19 +386,21 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--text-tertiary);
+    background: rgba(255, 255, 255, 0.3);
     border: none;
     cursor: pointer;
     transition: all var(--transition-normal);
+    position: relative;
 }
 
 .indicator.active {
     background: var(--text-accent);
-    transform: scale(1.2);
+    transform: scale(1.3);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .indicator:hover {
-    background: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
 }
 
@@ -455,14 +488,61 @@
 }
 
 /* Flag Component */
-.flag {
-    font-size: var(--font-size-3xl);
-    transition: all var(--transition-normal);
-    cursor: pointer;
+.method-flags {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
 }
 
-.flag:hover {
-    transform: scale(1.2) rotate(5deg);
+.flag-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    background: var(--glassmorphism);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.flag-item:hover {
+    transform: translateY(-5px);
+    background: var(--glassmorphism-strong);
+    border-color: var(--border-color-accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.flag-item.more {
+    background: var(--primary-gradient);
+    color: var(--text-dark);
+}
+
+.flag-item.more:hover {
+    background: var(--primary-gradient-hover);
+}
+
+.flag-icon {
+    font-size: var(--font-size-2xl);
+    transition: all var(--transition-normal);
+}
+
+.flag-text {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-secondary);
+}
+
+.flag-item.more .flag-text {
+    color: var(--text-dark);
+}
+
+.flag-item:hover .flag-icon {
+    transform: scale(1.1);
 }
 
 /* Highlight Text Component */

@@ -91,25 +91,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Testimonials Carousel
+    const testimonialTrack = document.querySelector('.testimonial-track');
     const testimonialCards = document.querySelectorAll('.testimonial-card');
     const indicators = document.querySelectorAll('.indicator');
     let currentTestimonial = 0;
     
     function showTestimonial(index) {
-        // Hide all testimonials
-        testimonialCards.forEach(card => {
-            card.classList.remove('active');
-        });
+        // Move the track
+        if (testimonialTrack) {
+            testimonialTrack.style.transform = `translateX(-${index * 50}%)`;
+        }
         
         // Remove active class from all indicators
         indicators.forEach(indicator => {
             indicator.classList.remove('active');
         });
-        
-        // Show current testimonial
-        if (testimonialCards[index]) {
-            testimonialCards[index].classList.add('active');
-        }
         
         // Activate current indicator
         if (indicators[index]) {
@@ -124,7 +120,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Set up automatic testimonial rotation
-    let testimonialInterval = setInterval(nextTestimonial, 5000);
+    let testimonialInterval;
+    if (testimonialCards.length > 1) {
+        testimonialInterval = setInterval(nextTestimonial, 5000);
+    }
     
     // Add click handlers for indicators
     indicators.forEach((indicator, index) => {
@@ -133,8 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
             showTestimonial(currentTestimonial);
             
             // Reset interval
-            clearInterval(testimonialInterval);
-            testimonialInterval = setInterval(nextTestimonial, 5000);
+            if (testimonialInterval) {
+                clearInterval(testimonialInterval);
+                testimonialInterval = setInterval(nextTestimonial, 5000);
+            }
         });
     });
     
