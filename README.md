@@ -121,11 +121,3 @@ Este é um projeto educacional e não possui afiliação oficial com a Invictus 
 ## 👨‍💻 Autor
 
 **Arthur Diógenes**
-
-- 📧 Email: [seu-email@example.com]
-- 💼 LinkedIn: [seu-linkedin]
-- 🐱 GitHub: [seu-github]
-
----
-
-⭐ Se este projeto foi útil para você, considere dar uma estrela no repositório!
